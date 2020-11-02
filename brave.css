@@ -1,0 +1,15 @@
+body{
+text-align:center;
+font-family:sans-serif;
+font-size:2em;
+background: rgb(131,58,180);
+background: linear-gradient(49deg, rgba(131,58,180,1) 0%, rgba(255,0,173,1) 53%, rgba(252,176,69,1) 100%);
+}
+.dl{
+	border-radius:3px;
+	width:200px;
+	height:100px;
+	border:none;
+	background-color: #fb542b;
+	color:white;
+}
