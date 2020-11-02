@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://customtab.netlify.app/msc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+
+<input type="file" accept="audio/*">
+<div id="message"></div>
+<audio id="music" controls="">
+  Your browser does not support the audio format.
+</audio> 
+<script>var player = document.getElementById('music'); 
+ 
+function playSelectedFile(event) {
+    var file = this.files[0];
+    player.src = URL.createObjectURL(file);
+}
+ 
+var inputNode = document.querySelector('input');
+    inputNode.addEventListener('change', playSelectedFile, false);</script>
+    <script>
+    function playSelectedFile(event) {
+    var file    = this.files[0],
+        type    = file.type,
+        canPlay = player.canPlayType(type),
+        message = 'Can play type "' + type 
+                + '": ' + (canPlay ? canPlay : 'no');
+                 
+    displayMessage(message, canPlay);
+     
+    if (canPlay) player.src = URL.createObjectURL(file);
+    else         resetPlayer();
+}</script>
+<script>
+function displayMessage(message, canPlay) {
+    var element = document.querySelector('#message');
+    element.innerHTML = message;
+    element.className = canPlay ? 'info' : 'error';
+}
+</script>
+
+
+</body></html>

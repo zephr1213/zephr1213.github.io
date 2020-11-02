@@ -1,7 +1,635 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+<!-- saved from url=(0030)https://customtab.netlify.app/ -->
+<html xmlns:text-align="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="./index_files/async-ads.js.download"></script><script async="" src="./index_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166481058-1');
+    gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    ga('set', 'userId', 'USER_ID'); // Set the user ID using signed-in user_id.
+  </script>
+
+  <title>New Tab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background: url("https://picsum.photos/200/300");
+  margin: 0;
+  min-width: 250px;
+}
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: ##ffffff;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+.navbar {
+  text-align: center;
+}
+.navbar .button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: black 1px solid;
+  font-size: 40px;
+  padding: 10px;
+  margin: 10px;
+}
+h1 {
+  color: black;
+  padding: white;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.spandiv {
+  background-color: ;
+}
+
+</style>
+<script>
+  function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+      alert("Welcome again!");
+    } else {
+      user =  prompt("Welcome To Your Productivity Page! You Can Write Down Your Tasks In The List Section. Click On The App Icon To Open Your Apps. Please type Ok if you understand otherwise click cancel to dismiss.");
+      if (user != "" && user != null) {
+        setCookie("username", user, 30);
+
+      }
+    }
+  }
+
+</script>
+
+<script src="./index_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./index_files/default+en.css"><link type="text/css" rel="stylesheet" href="./index_files/default.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body onload="checkCookie()" contextmenu="mymenu">
+<img src="./index_files/info.gif" width="48" onclick="openModal();currentSlide(3)">
+<img onclick="openModal();currentSlide(2)" src="./index_files/music.png">
+<menu type="context" id="mymenu">
+    <menuitem label="Refresh" onclick="window.location.reload();" icon="https://is.gd/jsaFs7">
+    </menuitem>
+    <menu label="Share on...">
+        <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open(&#39;//twitter.com/intent/tweet?text=&#39;+window.location.href);">
+        </menuitem>
+        <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open(&#39;//facebook.com/sharer/sharer.php?u=&#39;+window.location.href);">
+        </menuitem>
+    </menu>
+    <menuitem label="Email This Page" onclick="window.location=&#39;mailto:?body=&#39;+window.location.href;"></menuitem>
+</menu>
+
+
+  <div class="content">
+
+    <p id="demo" style="background-color: #ffffff">Mon Nov 02 2020 09:01:31 GMT-0600 (Central Standard Time)</p>
+
+    <script>
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d;
+    </script>
+
+    <div style="text-align: center;">
+      <svg onclick="openModal();currentSlide(1)" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M17.91667,33.0455c0,-8.35633 6.77608,-15.12883 15.12883,-15.12883h105.909c8.35633,0 15.12883,6.7725 15.12883,15.12883v105.909c0,8.35275 -6.7725,15.12883 -15.12883,15.12883h-105.909c-8.35275,0 -15.12883,-6.77608 -15.12883,-15.12883z" fill="#1e88e5"></path><path d="M86,136.16667c-27.66333,0 -50.16667,-22.50333 -50.16667,-50.16667c0,-27.66333 22.50333,-50.16667 50.16667,-50.16667c27.66333,0 50.16667,22.50333 50.16667,50.16667c0,27.66333 -22.50333,50.16667 -50.16667,50.16667zM86,43c-23.71092,0 -43,19.28908 -43,43c0,23.71092 19.28908,43 43,43c23.71092,0 43,-19.28908 43,-43c0,-23.71092 -19.28908,-43 -43,-43zM60.53325,98.1475l13.66683,-23.8865l6.71517,3.87358l-13.66683,23.8865zM82.603,53.95067c0.66292,-0.35475 1.4835,-0.13975 1.892,0.4945c2.88817,4.50425 13.23325,20.56117 19.20667,32.08875l-5.87667,3.12108c-6.28517,-11.55625 -13.74567,-28.86733 -15.87417,-33.86967c-0.29025,-0.688 -0.00717,-1.4835 0.65217,-1.83467zM107.27425,94.73617l-3.1605,-7.42467l-5.8695,3.12467l4.386,6.7725zM107.57167,95.87208l6.48942,9.81475c1.1395,1.72 0.54467,4.04917 -1.27567,5.01667v0c-1.82033,0.9675 -4.08142,0.15767 -4.87333,-1.74867l-4.50783,-10.86467zM57.90308,111.06183l8.84367,-8.18075l-6.71158,-3.87717l-2.68033,11.739zM84.85333,71.29758l-3.483,6.03792l-6.71517,-3.87717l3.483,-6.03792zM85.42667,70.30858l-0.01433,0.02508l-6.71158,-3.87717l0.01433,-0.02508c1.06783,-1.85617 3.44,-2.49042 5.29617,-1.419v0c1.849,1.07142 2.48683,3.44358 1.41542,5.29617zM57.33333,82.41667v10.75h4.4935l6.20633,-10.75zM98.48433,93.16667l-1.29,-1.99233c-0.1075,-0.16125 -0.39775,-0.73458 -0.46583,-0.87075c-1.31867,-2.42233 -2.6875,-5.11342 -4.05275,-7.88692h-12.54525l-6.19917,10.75zM104.99883,85.90683c0.06808,0.13258 0.38342,0.69517 0.45508,0.87792l2.71975,6.38192h6.493v-10.75h-11.54192c0.65575,1.19325 1.29358,2.36858 1.87408,3.49017z" fill="#ffffff"></path></g></g></svg>
+      <script async="" src="./index_files/f.txt"></script>
+      <div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;" dir="ltr" spellcheck="false"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div class="gsc-results-close-btn" tabindex="0"></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Web</div><span class="gs-spacer"> </span><div tabindex="0" aria-label="refinement" role="tab" class="gsc-tabHeader gsc-tabhInactive gsc-inline-block">Image</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div><div class="gsc-resultsRoot gsc-tabData gsc-tabdInactive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div class="gsc-modal-background-image" tabindex="0"></div></div></div></div>
+
+
+    <div id="myDIV" class="header">
+
+
+      <h1 style="margin:5px; background-color: #ffffff">To Do</h1>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span onclick="newElement()" id="button" class="addBtn">Add</span>
+      <a href="https://customtab.netlify.app/index.html" class="addBtn" type="submit">Clear List</a>
+
+    </div>
+    <ul id="myUL">
+
+    </ul>
+
+    <div class="navbar"><a href="mailto:" class="addBtn">
+      <img alt="Compose Mail" src="./index_files/composing-mail.png"></a>
+      <a href="https://www.youtube.com/" class="addBtn" target="_blank"><img src="./index_files/youtube.png"></a>
+      <a href="https://gmail.com/" class="addBtn" target="_blank"><img src="./index_files/gmail.png"></a>
+      <a href="https://outlook.live.com/owa/" class="addBtn" target="_blank"><img src="./index_files/microsoft-outlook-2019--v2.png"></a>
+    </div>
+  </div>
+  <script>
+
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+    // Add a "checked" symbol when clicking on a list item
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+      }
+    }, false);
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+
+
+    var input = document.getElementById("myInput");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("button").click();
+      }
+    });
+    document.getElementById("myInput")
+    setCookie("items", cookiex, 30);
+  </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="./index_files/firebase-app.js.download"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="./index_files/firebase-analytics.js.download"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="./index_files/init.js.download"></script>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">×</span>
+    <div class="modal-content">
+<div style="text-align: center;">
+        <div class="mySlides" style="display: block;">
+            <a href="https://customtab.netlify.app/Note.html" target="_blank">
+                <img src="./index_files/clipboard--v2.png">
+        </a>
+                <!--weather-->
+               <a href="https://customtab.netlify.app/weather.html" target="_blank"> <img src="./index_files/partly-cloudy-day.png">
+               </a>
+                <!--/weather-->
+                <!--search-->
+
+                <!--/search-->
+                <a href="https://customtab.netlify.app/cvidcontrol.html" target="_blank"><img src="./index_files/coronavirus.png"></a>
+                <a href="https://customtab.netlify.app/camviewer.html" target="_blank"><img src="./index_files/camera.png"></a>
+                <!--socialtop-->
+                <a href="https://www.facebook.com/" target="_blank"><img src="./index_files/facebook-new.png"></a>
+                <!--watch-->
+                <!--hulu-->
+                <a href="https://www.hulu.com/" target="_blank">
+                    <img src="./index_files/hulu.png">
+                </a>
+                <!--/hulu-->
+                <!--netflix-->
+                <a href="https://www.netflix.com/" target="_blank"><img src="./index_files/netflix.png"></a>
+                <!--watch/-->
+
+                <!--navbuttons-->
+
+                <!--social-->
+                <!--twitterlong-->
+                <a href="https://twitter.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M150.5,46.00244c-4.74511,2.09961 -9.84717,3.52734 -15.20117,4.15722c5.45898,-3.27539 9.6582,-8.46142 11.63184,-14.63428c-5.10205,3.02344 -10.771,5.22803 -16.79687,6.42481c-4.8291,-5.14405 -11.71582,-8.37744 -19.31641,-8.37744c-14.61328,0 -26.47608,11.86279 -26.47608,26.47607c0,2.07861 0.23096,4.09424 0.69288,6.02588c-22.00391,-1.0918 -41.50928,-11.63184 -54.54785,-27.65185c-2.28857,3.90527 -3.59033,8.46142 -3.59033,13.31152c0,9.17529 4.66114,17.27979 11.77881,22.0249c-4.34619,-0.14697 -8.41944,-1.32275 -11.98877,-3.31738c0,0.12597 0,0.23096 0,0.33594c0,12.82861 9.1123,23.53662 21.22705,25.95117c-2.22559,0.60889 -4.55616,0.94482 -6.9707,0.94482c-1.70069,0 -3.38038,-0.16797 -4.97608,-0.48291c3.35938,10.51905 13.14356,18.16163 24.71241,18.39258c-9.04932,7.09668 -20.47119,11.3169 -32.85889,11.3169c-2.1416,0 -4.24121,-0.12597 -6.31982,-0.37793c11.71582,7.5166 25.61523,11.90478 40.56445,11.90478c48.68994,0 75.31299,-40.33349 75.31299,-75.31298c0,-1.13379 -0.04199,-2.28858 -0.08398,-3.42236c5.16504,-3.73731 9.6582,-8.39844 13.20654,-13.68945z"></path></g></g></svg></a>
+                <a href="https://www.pinterest.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e74c3c"><path d="M86,21.5c-35.63037,0 -64.5,28.86963 -64.5,64.5c0,27.33692 17.00684,50.66357 41.00537,60.06982c-0.56689,-5.10205 -1.0918,-12.93359 0.20996,-18.51855c1.17578,-5.01807 7.55859,-32.06104 7.55859,-32.06104c0,0 -1.91065,-3.86328 -1.91065,-9.57422c0,-8.96533 5.18604,-15.66308 11.65283,-15.66308c5.50097,0 8.16748,4.13623 8.16748,9.09131c0,5.54297 -3.52734,13.81543 -5.35401,21.47901c-1.51172,6.4248 3.2334,11.65283 9.55322,11.65283c11.46387,0 20.28223,-12.09375 20.28223,-29.5415c0,-15.43213 -11.08594,-26.22413 -26.93799,-26.22413c-18.35059,0 -29.12158,13.75244 -29.12158,27.9878c0,5.54297 2.1416,11.48486 4.8081,14.71826c0.52491,0.62988 0.58789,1.19678 0.44092,1.84766c-0.50391,2.03662 -1.57471,6.4248 -1.78467,7.30664c-0.29394,1.19678 -0.94482,1.44873 -2.16259,0.86084c-8.0625,-3.7373 -13.10156,-15.51611 -13.10156,-24.98535c0,-20.34522 14.78125,-39.03174 42.62207,-39.03174c22.38184,0 39.7666,15.93604 39.7666,37.26807c0,22.21386 -14.02539,40.10254 -33.46778,40.10254c-6.52979,0 -12.68164,-3.38037 -14.78125,-7.39062c0,0 -3.2334,12.30371 -4.03125,15.32715c-1.44873,5.60595 -5.375,12.61865 -8.02051,16.90185c6.04688,1.86865 12.45068,2.87646 19.10644,2.87646c35.63037,0 64.5,-28.86963 64.5,-64.5c0,-35.63037 -28.86963,-64.5 -64.5,-64.5z"></path></g><path d="" fill="none"></path><path d="" fill="none"></path></g></g></svg></a>
+                <a href="https://spotify.com/" target="_blank"><img src="./index_files/spotify--v1.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="./index_files/instagram-new.png"></a>
+            <!--end-->
+            <a href="https://www.office.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#e74c3c"><path d="M102.125,5.375l-86,32.25v102.125l4.74612,1.77912l0.18813,0.41388l0.4085,-0.18813l80.65725,30.24513l48.375,-16.125v-134.375zM139.75,148.12425l-37.41537,12.47l-41.05963,-15.394l40.85,3.02613v-112.11175l-53.75,13.4375v67.94538l-21.5,9.92225v-82.345l75.45963,-28.29937l37.41537,12.47538zM40.67263,132.89688l18.45237,-8.51937v-66.42962l32.25,-8.0625v86.76325z"></path></g></g></svg></a>
+            <a href="https://docs.google.com/" target="_blank"><img width="64" src="./index_files/Google Docs.ico"></a>
+            <a href="https://www.office.com/launch/word" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M85.32813,21.5l-0.50391,0.16797l-59.125,13.10156l-4.19922,1.00781v100.44531l4.19922,1.00781l59.125,13.10156l0.50391,0.16797h11.42188v-16.125h53.75v-96.75h-53.75v-16.125zM86,32.41797v107.16406l-53.75,-11.75781v-83.64844zM96.75,48.375h43v75.25h-43v-10.75h37.625v-10.75h-37.625v-5.375h37.625v-10.75h-37.625v-5.375h37.625v-10.75h-37.625v-5.375h37.625v-10.75h-37.625zM80.625,59.125l-8.39844,0.67188c-0.62988,4.26221 -3.96826,27.25293 -4.03125,29.05859l-3.52734,-28.05078l-11.42187,1.67969l-4.53516,29.05859l-3.02344,-28.05078l-8.0625,1.00781l5.375,43l10.41406,1.67969l5.87891,-34.43359c0.04199,1.93164 4.07324,28.55469 5.20703,36.28125l7.89453,1.34375z"></path></g></g></svg></a>
+
+            <a href="ms-penworkspace://Whiteboard"><img src="./index_files/white.jpg"></a>
+            <a href="ms-windows-store:"><img src="./index_files/windows-10-store.png"></a>
+
+            <a href="https://www.msn.com/" class="button" target="_blank"><img src="./index_files/news.png"></a>
+            <a href="https://www.bing.com/" class="button" target="_blank"><img src="./index_files/bing.png"></a>
+            <a href="https://www.google.com/" class="button" target="_blank"><img src="./index_files/google-logo.png"></a>
+            <a href="ms-settings:" class="button" target="_blank"><img src="./index_files/settings.png"></a>
+            <a href="ms-settings:mobile-devices-addphone-direct" class="button" target="_blank"><img src="./index_files/phone.png"></a>
+            <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjgx-rh8rTpAhVKb60KHfi2CJoQFjAAegQIARAB&amp;url=https%3A%2F%2Fwww.dailymotion.com%2Fus&amp;usg=AOvVaw1xGk8d3vxGdARxISnBvLyy" target="_blank"><img src="./index_files/SvWBYS" height="70"></a>
+
+        </div>
+    </div>
+        <div class="mySlides" style="display: none;">
+<iframe src="./index_files/msc.html" width="100%"></iframe>
+        </div>
+        <div class="mySlides" style="display: none;">
+           <h1>Icons <a href="https://icons8.com/" target="_blank">By Icons8.com</a></h1>
+            <h2>Weather Information By<a href="http://weatherwidget.io/" target="_blank">Weatherwidget</a></h2>
+            <h3>Search By Google</h3>
+            </div>
+
+
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+            <div class="column">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+</div>
+
+
+
+
+
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 1176px; display: none; top: 217px; position: absolute; left: 230px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>
