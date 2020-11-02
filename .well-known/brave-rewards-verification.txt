@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: zephr1213.github.io
+Token: 9399bd8ab3bacaae9a740c3dc78552b5da99b23601eb82751ddfaacdb195ca63
