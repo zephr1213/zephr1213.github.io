@@ -1,0 +1,16 @@
+<!DOCTYPE html+xs>
+<html>
+<head>
+<script src="https://xscript.netlify.app/xs.min.js"></script>
+</head>
+<body>
+<form>
+<script src="https://raincaptcha.com/base.js" type="application/javascript"></script>
+<div type="submit" id="rain-captcha" data-key="70338ed96213e4b622fd9dac93e0ddb2cfa880bf"></div>
+</form>
+<script>
+var url = urlParams.get("url");
+select("form").attr('action',url);
+</script>
+</body>
+</html>
