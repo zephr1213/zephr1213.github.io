@@ -10,7 +10,11 @@
 </form>
 <script>
 var url = urlParams.get("url");
-select("form").attr('action',url);
+if ('rainCaptcha' in window) {
+rainCaptcha.on('complete', function(data){
+window.location.href = url;
+}
+}
 </script>
 </body>
 </html>
