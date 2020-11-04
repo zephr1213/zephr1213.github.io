@@ -5,6 +5,7 @@
 </head>
 <body>
 <form>
+<h1>FILL THE CAPTCHA TO PROCEED</h1>
 <script src="https://raincaptcha.com/base.js" type="application/javascript"></script>
 <div type="submit" id="rain-captcha" data-key="70338ed96213e4b622fd9dac93e0ddb2cfa880bf"></div>
 </form>
@@ -15,6 +16,8 @@ rainCaptcha.on('complete', function(data){
 window.location.href = url;
 })
 }
+select("form").css('text-align','center');
+select("form").css('font-family','sans-serif');
 </script>
 </body>
 </html>
