@@ -13,7 +13,7 @@
 var url = urlParams.get("url");
 if ('rainCaptcha' in window) {
 rainCaptcha.on('complete', function(data){
-window.location.href = url;
+window.open(url,"_top")
 })
 }
 select("form").css('text-align','center');
